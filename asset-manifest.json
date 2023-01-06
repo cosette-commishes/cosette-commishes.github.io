@@ -1,16 +1,14 @@
 {
   "files": {
-    "main.css": "/cosette-commishes/static/css/main.073c9b0a.css",
-    "main.js": "/cosette-commishes/static/js/main.3d67575e.js",
-    "static/js/787.9492bceb.chunk.js": "/cosette-commishes/static/js/787.9492bceb.chunk.js",
-    "static/media/logo.svg": "/cosette-commishes/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/cosette-commishes/static/css/main.9eed470b.css",
+    "main.js": "/cosette-commishes/static/js/main.9112710d.js",
+    "static/media/main-img.jpg": "/cosette-commishes/static/media/main-img.39b831d2e3f87289e428.jpg",
     "index.html": "/cosette-commishes/index.html",
-    "main.073c9b0a.css.map": "/cosette-commishes/static/css/main.073c9b0a.css.map",
-    "main.3d67575e.js.map": "/cosette-commishes/static/js/main.3d67575e.js.map",
-    "787.9492bceb.chunk.js.map": "/cosette-commishes/static/js/787.9492bceb.chunk.js.map"
+    "main.9eed470b.css.map": "/cosette-commishes/static/css/main.9eed470b.css.map",
+    "main.9112710d.js.map": "/cosette-commishes/static/js/main.9112710d.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.3d67575e.js"
+    "static/css/main.9eed470b.css",
+    "static/js/main.9112710d.js"
   ]
 }
