@@ -12,11 +12,8 @@ const App = () => {
     return(
         <Container>
             <BrowserRouter basename="/cosette-commishes">
-                <div>  
-                    <Header />
-                    <Route path="/" exact component={Home} />
-                    <Route path="/faq" exact component={Faq} />
-                </div>
+                <Route path="/" exact component={Home} />
+                <Route path="/faq" exact component={Faq} />
             </BrowserRouter>
         </Container>
     );
