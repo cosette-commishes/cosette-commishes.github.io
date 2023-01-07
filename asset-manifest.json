@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/cosette-commishes/static/css/main.9eed470b.css",
-    "main.js": "/cosette-commishes/static/js/main.9112710d.js",
+    "main.css": "/cosette-commishes/static/css/main.06e80785.css",
+    "main.js": "/cosette-commishes/static/js/main.deaf8412.js",
     "static/media/main-img.jpg": "/cosette-commishes/static/media/main-img.39b831d2e3f87289e428.jpg",
     "index.html": "/cosette-commishes/index.html",
-    "main.9eed470b.css.map": "/cosette-commishes/static/css/main.9eed470b.css.map",
-    "main.9112710d.js.map": "/cosette-commishes/static/js/main.9112710d.js.map"
+    "main.06e80785.css.map": "/cosette-commishes/static/css/main.06e80785.css.map",
+    "main.deaf8412.js.map": "/cosette-commishes/static/js/main.deaf8412.js.map"
   },
   "entrypoints": [
-    "static/css/main.9eed470b.css",
-    "static/js/main.9112710d.js"
+    "static/css/main.06e80785.css",
+    "static/js/main.deaf8412.js"
   ]
 }
