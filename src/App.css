@@ -60,9 +60,10 @@
     background-image: url("img/logo.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 339px;
+    width: 339px !important;
     height: 192px;
     margin: 0px 160px 40px 0px;
+    position: absolute;
 }
 
 /* HOME */
@@ -120,7 +121,6 @@
     color: #F4E6EC;
     font-family: 'Poppins';
     font-size: large;
-    margin-top: -23px;
     font-size: 20px;
 }
 
@@ -131,7 +131,7 @@
     margin-top: -15px;
 }
 
-.paraph-alert {
+.paraph-alert p {
     color: var(--primary-color);
     font-family: 'Poppins';
     font-size: large;
@@ -145,9 +145,18 @@
     background-size: 100%;
     background-repeat: no-repeat;
     border-radius: 50px;
-    width: 550px;
+    width: 550px !important;
     height: 150px;
     margin: 0px 0px 38px 150px;
+    position: absolute !important;
+}
+
+.title-warning {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    margin-top: 10px;
 }
 
 /* Nav Header */
@@ -156,6 +165,10 @@
     margin-top: 25px;
     width: 100%;
     position: fixed;
+}
+
+.nav-menu-button {
+    display: none;
 }
 
 .nav-button:hover {
@@ -179,26 +192,19 @@
     margin: 0px 27px 0px 27px;
 }
 
-.title-warning {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    font-size: 45px;
-    margin-top: 10px;
-}
-
 /* TERMS OF SERVICE */
 
 .tos-col {
-    max-height: 340px;
+    height: 340px;
+    margin-right: 18px;
 }
 
 .tos-sections {
-    display: block;
     background-color: transparent;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     padding: 10px 10px 0px 10px;
+    justify-content: center;
 }
 
 .tos-sections-btn {
@@ -320,7 +326,11 @@
         padding: 15px 32px;
         font-size: 20px;
         margin: 35px 4px 2px 2px;
-        width: 250px;
+        width: 300px;
+    }
+
+    .main-child-container .row {
+        margin-right: 0px !important;
     }
 
     /* HOME */
@@ -335,7 +345,7 @@
         background-position: center;
     }
 
-    .main-col-home {
+    .main-col-center {
         background-color: var(--second-background);
     }
 
@@ -363,12 +373,80 @@
 
     /* NAVBAR */
     .nav-header {
-        position: relative ;
+        position: relative;
+        margin-top: 0px;
+        background-color: var(--second-background);
     }
 
+    .nav-button {
+        margin: 10px 27px 0px 27px;
+    }
+    
+    .nav-menu-button {
+        border-radius: 25px;
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+        width: 300px;
+        margin: 0px 27px 0px 27px;
+    }
+
+    .nav-menu-container {
+        width: 100%;
+    }
+    
+    .menu-icon {
+        width: auto;
+        height: 30px;
+        filter: invert(60%) sepia(9%) saturate(4882%) hue-rotate(287deg) brightness(101%) contrast(101%);
+    }
     /* PRICING */
-    .nav-header {
-        position: relative ;
+    .floating-warning {
+        background-color: var(--primary-color);
+        width: 340px !important;
+        height: 120px;
+        margin: 0px;
+        position: relative !important;
+        margin-bottom: 50px;
+        margin-top: 15px !important;
+        margin-right: 0px !important;
+        margin-left: 10px !important;
+    }
+
+    .paraph-warning {
+        font-size: 14px;
+    }
+    
+    .title-warning {
+        font-size: 35px;
+    }
+
+    /* FLOATING LOGO */
+    .floating-logo {
+        width: 300px !important;
+        height: 192px;
+        margin: 0px;
+        position: relative !important;
+        margin-bottom: 50px;
+    }
+
+    .nav-menu {
+        background-color: #ccc;
+    }
+
+    .tos-sections {
+        flex-direction: column;
+    }
+
+    .tos-col {
+        margin-right: 0px;
+        margin-bottom: 80px;
+    }
+
+    .paraph-alert p{
+        padding-left: 25px;
+        padding-right: 25px;
     }
 }
 
