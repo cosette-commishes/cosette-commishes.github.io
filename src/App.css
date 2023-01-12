@@ -41,7 +41,6 @@
 }
 
 .top-button {
-    background-color: transparent;
     border: 2px solid var(--primary-color);
     border-radius: 15px;
     color: white;
@@ -54,6 +53,12 @@
     font-size: 20px;
     margin: 35px 4px 2px 2px;
     width: 450px;
+}
+
+.container-paraph-pricing {
+    display: inline-block;
+    font-size: 20px;
+    width: 1050px !important;
 }
 
 .floating-logo {
@@ -115,12 +120,14 @@
     font-weight: bold;
     font-size: 45px;
     margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 .paraph-pricing {
     color: #F4E6EC;
     font-family: 'Poppins';
     font-size: 20px;
+    margin: 0px;
 }
 
 .paraph-warning {
@@ -228,6 +235,23 @@
     font-weight: 800;
 }
 
+.title-faq {
+    color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.double-title-faq {
+    margin-bottom: -29px;
+}
+
+.container-paraph-pricing {
+    width: 500px;
+}
+
 /* Scrollbar */
 /* width */
 ::-webkit-scrollbar {
@@ -302,7 +326,7 @@
 }
 
 .tracking-col {
-    height: 570px;
+    height: 500px;
 }
 
 /* Footer */
@@ -316,7 +340,7 @@
     color: white;
     text-align: center;
     padding: 10px;
- }
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -332,6 +356,16 @@
         margin-right: 0px !important;
     }
 
+    .main-col-center {
+        background-color: var(--second-background);
+    }
+
+    .main-child-container {
+        background-color: var(--second-background);
+        width: 100% !important;
+        border-radius: 0px;
+    }
+
     /* HOME */
     .main-container {
         height: 100%;
@@ -342,16 +376,6 @@
         height: 200px;
         border-radius: 50%;
         background-position: center;
-    }
-
-    .main-col-center {
-        background-color: var(--second-background);
-    }
-
-    .main-child-container {
-        background-color: var(--second-background);
-        width: 100% !important;
-        border-radius: 0px;
     }
 
     .logo {
@@ -381,7 +405,7 @@
         margin: 10px 27px 0px 27px;
         display: none;
     }
-    
+
     .nav-menu-button {
         border-radius: 25px;
         padding: 15px 32px;
@@ -395,12 +419,13 @@
     .nav-menu-container {
         width: 100%;
     }
-    
+
     .menu-icon {
         width: auto;
         height: 30px;
         filter: invert(60%) sepia(9%) saturate(4882%) hue-rotate(287deg) brightness(101%) contrast(101%);
     }
+
     /* PRICING */
     .floating-warning {
         background-color: var(--primary-color);
@@ -417,9 +442,14 @@
     .paraph-warning {
         font-size: 14px;
     }
-    
+
     .title-warning {
         font-size: 35px;
+    }
+
+    .paraph-alert p {
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     /* FLOATING LOGO */
@@ -431,10 +461,7 @@
         margin-bottom: 50px;
     }
 
-    .nav-menu {
-        background-color: #ccc;
-    }
-
+    /* T.O.S */
     .tos-sections {
         flex-direction: column;
     }
@@ -444,11 +471,7 @@
         margin-bottom: 80px;
     }
 
-    .paraph-alert p{
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
+    /* PRICING */
     .title-pricing {
         font-size: 27px;
         padding-left: 25px;
@@ -459,11 +482,39 @@
         padding-left: 25px;
         padding-right: 25px;
     }
- 
+
+    .container-paraph-pricing {
+        width: 350px !important;
+    }
+
+    /* FAQ */
     .faq-container {
         margin-bottom: 45px;
     }
-    
+
+    .title-faq {
+        font-size: 27px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .double-title-faq {
+        margin-bottom: -10px;
+    }
+
+    .track-container {
+        width: auto;
+        height: 150px;
+    }
+
+    /* TRACKING */
+    .commission-info {
+        display: none;
+    }
+
+    .tracking-col {
+        margin-bottom: 30px;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

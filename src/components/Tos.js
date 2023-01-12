@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { connect } from "react-redux";
 import { changeRoute } from "../actions";
+import FloatingLogo from "./FloatingLogo";
 
 class Tos extends React.Component {
     infoTos() {
@@ -161,6 +162,9 @@ class Tos extends React.Component {
                         </Col>
                     </Row>
                     {this.infoTos()}
+                    <Row className="main-col-center justify-content-center gx-0">
+                        <FloatingLogo />
+                    </Row>
                 </div>
             </div>
         );

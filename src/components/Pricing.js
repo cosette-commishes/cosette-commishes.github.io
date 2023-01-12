@@ -29,7 +29,7 @@ class Pricing extends React.Component {
                         <p className="paraph-pricing">Full: 23 USD</p>
                     </Col>
                 </Row>
-                <Row className="text-center">
+                <Row>
                     <Col>
                         <p className="title-pricing">HALF BODY</p>
                         <p className="paraph-pricing">Sketch: 20 USD</p>
@@ -43,7 +43,7 @@ class Pricing extends React.Component {
                         <p className="paraph-pricing">Full:  35 USD- May have background</p>
                     </Col>
                 </Row>
-                <Row className="text-center">
+                <Row>
                     <Col>
                         <p className="title-pricing">REFERENCES</p>
                         <p className="paraph-pricing">Two sides: 50 USD</p>
