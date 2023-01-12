@@ -120,7 +120,6 @@
 .paraph-pricing {
     color: #F4E6EC;
     font-family: 'Poppins';
-    font-size: large;
     font-size: 20px;
 }
 
@@ -380,6 +379,7 @@
 
     .nav-button {
         margin: 10px 27px 0px 27px;
+        display: none;
     }
     
     .nav-menu-button {
@@ -448,6 +448,22 @@
         padding-left: 25px;
         padding-right: 25px;
     }
+
+    .title-pricing {
+        font-size: 27px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .paraph-pricing {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+ 
+    .faq-container {
+        margin-bottom: 45px;
+    }
+    
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
