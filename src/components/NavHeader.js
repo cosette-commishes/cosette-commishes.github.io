@@ -35,7 +35,7 @@ class NavHeader extends React.Component {
     showMenu(route) {
         return this.pages.filter(page => page.url !== route).map((page) => {
             return (
-                <Col key={page.url}>
+                <Col key={page.url} className="d-flex justify-content-around">
                     <Link
                         to={page.url}
                         className="nav-button"

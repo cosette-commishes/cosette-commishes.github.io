@@ -16,13 +16,13 @@ class Pricing extends React.Component {
         return (
             <>
                 <Row>
-                    <Col>
+                    <Col xs={12} md={6}>
                         <p className="title-pricing">ICONS</p>
                         <p className="paraph-pricing">Sketch: 10 USD</p>
                         <p className="paraph-pricing">Flat: 15 USD</p>
                         <p className="paraph-pricing">Full: 18 USD</p>
                     </Col>
-                    <Col>
+                    <Col xs={12} md={6}>
                         <p className="title-pricing">BUST</p>
                         <p className="paraph-pricing">Sketch: 15 USD</p>
                         <p className="paraph-pricing">Flat: 20 USD</p>
@@ -30,13 +30,13 @@ class Pricing extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
+                    <Col xs={12} md={6}>
                         <p className="title-pricing">HALF BODY</p>
                         <p className="paraph-pricing">Sketch: 20 USD</p>
                         <p className="paraph-pricing">Flat: 25 USD</p>
                         <p className="paraph-pricing">Full: 28 USD</p>
                     </Col>
-                    <Col>
+                    <Col xs={12} md={6}>
                         <p className="title-pricing">FULLBODY</p>
                         <p className="paraph-pricing">Flat: 30 USD </p>
                         <p className="paraph-pricing">Sketch: 25 USD</p>
@@ -44,13 +44,13 @@ class Pricing extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
+                    <Col xs={12} md={6}>
                         <p className="title-pricing">REFERENCES</p>
                         <p className="paraph-pricing">Two sides: 50 USD</p>
                         <p className="paraph-pricing">Two sides and close up</p>
                         <p className="paraph-pricing">details, acesories and others: 80 USD</p>
                     </Col>
-                    <Col>
+                    <Col xs={12} md={6}>
                         <p className="title-pricing">EXTRAS</p>
                         <p className="paraph-pricing">Clothes: 8 USD</p>
                         <p className="paraph-pricing">Characters: 8 USD</p>
@@ -73,7 +73,7 @@ class Pricing extends React.Component {
                     <Row className="mt-4 main-col-center justify-content-center">
                         <Col xs={9}>{this.pricingInfo()}</Col>
                     </Row>
-                    <Row className="main-col-center justify-content-center">
+                    <Row className="main-col-center justify-content-center gx-0">
                         <FloatingWarning />
                     </Row>
                     <Row className="main-col-center justify-content-center gx-0">

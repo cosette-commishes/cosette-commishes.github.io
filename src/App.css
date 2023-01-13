@@ -402,7 +402,7 @@
     }
 
     .nav-button {
-        margin: 10px 27px 0px 27px;
+        margin-top: 10px;
         display: none;
     }
 
@@ -436,7 +436,6 @@
         margin-bottom: 50px;
         margin-top: 15px !important;
         margin-right: 0px !important;
-        margin-left: 10px !important;
     }
 
     .paraph-warning {
