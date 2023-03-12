@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { changeRoute } from "../actions";
@@ -8,17 +8,19 @@ class Home extends React.Component {
 
     componentDidMount() {
         const path = (window.location.pathname).split('/');
-        this.props.changeRoute("/"+path[ path.length - 1 ]);
+        this.props.changeRoute("/" + path[path.length - 1]);
+        window.scrollTo(0, 0);
     }
 
     render() {
         return (
-            <div className="main-container d-flex flex-column justify-content-center align-items-center">
+            // <div className="main-container d-flex flex-column justify-content-center align-items-center">
+            <Container className="p-5">
                 <Row className="main-child-container">
-                    <Col className="my-auto d-flex justify-content-center">
+                    <Col xs={12} xl={6} className="my-auto d-flex justify-content-center">
                         <div className="img-container" />
                     </Col>
-                    <Col className="main-col-center">
+                    <Col xl={6} className="main-col-center">
                         <Row className="welcome-row">
                             <div className="text-center">
                                 <div className="logo"></div>
@@ -42,7 +44,8 @@ class Home extends React.Component {
                         </Row>
                     </Col>
                 </Row>
-            </div>
+            </Container>
+            // </div>
         );
     }
 
@@ -52,4 +55,4 @@ const mapStateToProps = state => {
     return { route: state.route };
 }
 
-export default connect(mapStateToProps, {changeRoute})(Home);
+export default connect(mapStateToProps, { changeRoute })(Home);

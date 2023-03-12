@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { connect } from "react-redux";
 import { changeRoute } from "../actions";
 import FloatingLogo from "./FloatingLogo";
@@ -7,40 +7,44 @@ import FloatingLogo from "./FloatingLogo";
 class Tos extends React.Component {
     infoTos() {
         return (
-            <Row className="mt-4">
-                <Row className="gx-0">
+            <Container>
+                <Row className="text-center mt-3">
                     <div className="paraph-alert">
                         <p>By commissioning me, you are stating that you have read and agreed to these terms.</p>
                         <p>I will deny your request If I realize you didn't read this or you don’t follow these</p>
-                        <p style={{ "marginBottom": "50px" }}>conditions. Basic terms you should know when you hiring my art service:</p>
+                        <p style={{ "marginBottom": "30px" }}>conditions. Basic terms you should know when you hiring my art service:</p>
                     </div>
                 </Row>
-                <Row className="main-col-center gx-0">
-                    <Col></Col>
-                    <Col xs={9}>
-                        <div className="d-flex justify-content-center tos-sections">
-                            <a href="#basic-terms" className="tos-sections-btn">
-                                I. Basic Terms
-                            </a>
-                            <a href="#payment-information" className="tos-sections-btn">
-                                II. PAYMENT INFORMATION
-                            </a>
-                            <a href="#commercial-rights" className="tos-sections-btn">
-                                III. COMMERCIAL RIGHTS
-                            </a>
-                            <a href="#will-wont" className="tos-sections-btn">
-                                IV. WILL/WON'T DRAW
-                            </a>
-                            <a href="#black-list" className="tos-sections-btn">
-                                V. BLACK LIST
-                            </a>
-                        </div>
+                <Row>
+                <Col lg={3} className="main-col-center tos-sections flex-column">
+                    <Col xs={12}>
+                        <a href="#basic-terms" className="tos-sections-btn">
+                            I. Basic Terms
+                        </a>
                     </Col>
-                    <Col></Col>
-                </Row>
-                <Row className="main-col-center gx-0">
-                    <Col></Col>
-                    <Col xs={9} md={8} className="overflow-auto text-start tos-col mt-3 text-left">
+                    <Col xs={12}>
+                        <a href="#payment-information" className="tos-sections-btn">
+                            II. Payment Information
+                        </a>
+                    </Col>
+                    <Col xs={12}>
+                        <a href="#commercial-rights" className="tos-sections-btn">
+                            III. Commercial Rights
+                        </a>
+                    </Col>
+                    <Col xs={12}>
+                        <a href="#will-wont" className="tos-sections-btn">
+                            IV. Will/Won't Draw
+                        </a>
+                    </Col>
+                    <Col xs={12}>
+                        <a href="#black-list" className="tos-sections-btn">
+                            V. Black List
+                        </a>
+                    </Col>
+                </Col>
+                <Col lg={9} className="main-col-center">
+                    <Col  className="overflow-auto text-start tos-col mt-3 text-left">
                         <div className="title-terms text-center" id="basic-terms">
                             <p>I. Basic Terms</p>
                         </div>
@@ -140,33 +144,36 @@ class Tos extends React.Component {
                             <br />
                         </ul>
                     </Col>
-                    <Col></Col>
+                </Col>
                 </Row>
-            </Row>
+            </Container>
         );
     }
 
     componentDidMount() {
         const path = (window.location.pathname).split('/');
         this.props.changeRoute("/" + path[path.length - 1]);
+        window.scrollTo(0, 0);
     }
     render() {
         return (
-            <div className="main-container d-flex flex-column justify-content-center align-items-center">
-                <div className="text-center main-child-container">
-                    <Row>
-                        <Col className="text-center">
-                            <div className="top-button">
-                                T.O.S
-                            </div>
-                        </Col>
-                    </Row>
-                    {this.infoTos()}
-                    <Row className="main-col-center justify-content-center gx-0">
-                        <FloatingLogo />
-                    </Row>
-                </div>
-            </div>
+            // <div className="main-container d-flex flex-column justify-content-center align-items-center">
+            //     <div className="text-center main-child-container">
+            <Container className="main-child-container">
+                <Row className="justify-content-center">
+                    <Col xl={4} className="text-center">
+                        <div className="top-button">
+                            T.O.S
+                        </div>
+                    </Col>
+                </Row>
+                {this.infoTos()}
+                <Row className="main-col-center justify-content-center floating-logo-row">
+                    <FloatingLogo />
+                </Row>
+            </Container>
+            //     </div>
+            // </div>
         );
     }
 

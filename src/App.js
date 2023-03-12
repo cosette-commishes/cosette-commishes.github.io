@@ -24,7 +24,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <>
                 <BrowserRouter basename="/cosette-commishes">
                     <Route path="/" exact component={Home} />
                     <>
@@ -35,8 +35,8 @@ class App extends React.Component {
                         <Route path="/order-tracking" exact component={OrderTracking} />
                     </>
                 </BrowserRouter>
-                <Footer />
-            </div>
+                {/* <Footer /> */}
+            </>
         );
     }
 }

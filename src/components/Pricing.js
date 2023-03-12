@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import FloatingWarning from "./FloatingWarning";
 import { connect } from "react-redux";
 import { changeRoute } from "../actions";
@@ -10,12 +10,13 @@ class Pricing extends React.Component {
     componentDidMount() {
         const path = (window.location.pathname).split('/');
         this.props.changeRoute("/" + path[path.length - 1]);
+        window.scrollTo(0, 0);
     }
 
     pricingInfo() {
         return (
             <>
-                <Row>
+                <Row className="text-center">
                     <Col xs={12} md={6}>
                         <p className="title-pricing">ICONS</p>
                         <p className="paraph-pricing">Sketch: 10 USD</p>
@@ -29,7 +30,7 @@ class Pricing extends React.Component {
                         <p className="paraph-pricing">Full: 23 USD</p>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="text-center">
                     <Col xs={12} md={6}>
                         <p className="title-pricing">HALF BODY</p>
                         <p className="paraph-pricing">Sketch: 20 USD</p>
@@ -40,10 +41,10 @@ class Pricing extends React.Component {
                         <p className="title-pricing">FULLBODY</p>
                         <p className="paraph-pricing">Flat: 30 USD </p>
                         <p className="paraph-pricing">Sketch: 25 USD</p>
-                        <p className="paraph-pricing">Full:  35 USD- May have background</p>
+                        <p className="paraph-pricing">Full:  ground</p>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="text-center mb-5">
                     <Col xs={12} md={6}>
                         <p className="title-pricing">REFERENCES</p>
                         <p className="paraph-pricing">Two sides: 50 USD</p>
@@ -56,31 +57,32 @@ class Pricing extends React.Component {
                         <p className="paraph-pricing">Characters: 8 USD</p>
                         <p className="paraph-pricing">NSFW version: 10 USD</p>
                     </Col>
-                </Row></>
+                </Row>
+            </>
         );
     }
     render() {
         return (
-            <div className="main-container d-flex flex-column justify-content-center align-items-center">
-                <div className="text-center main-child-container">
-                    <Row>
-                        <Col className="text-center justify-content-center">
+            // <div className="main-container d-flex flex-column justify-content-center align-items-center">
+                // <div className="text-center main-child-container">
+                <Container className="main-child-container">
+                    <Row className="justify-content-center">
+                        <Col xs={12} xl={4}>
                             <div className="top-button">
                                 PRICE LIST
                             </div>
                         </Col>
                     </Row>
-                    <Row className="mt-4 main-col-center justify-content-center">
-                        <Col xs={9}>{this.pricingInfo()}</Col>
-                    </Row>
-                    <Row className="main-col-center justify-content-center gx-0">
+                        {this.pricingInfo()}
+                    <Row className="floating-warning-row">
                         <FloatingWarning />
                     </Row>
-                    <Row className="main-col-center justify-content-center gx-0">
+                    <Row className="main-col-center justify-content-center floating-logo-row">
                         <FloatingLogo />
                     </Row>
-                </div>
-            </div>
+                </Container>
+                // </div>
+            // </div>
         );
     }
 

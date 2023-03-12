@@ -35,9 +35,14 @@ class NavHeader extends React.Component {
     showMenu(route) {
         return this.pages.filter(page => page.url !== route).map((page) => {
             return (
-                <Col key={page.url} className="d-flex justify-content-around">
+                <Col xs={12} xl={3} key={page.url} className="d-flex justify-content-around">
                     <Link
                         to={page.url}
+                        onClick={() => {
+                            this.setState(prevState => ({
+                                menuHidden: !prevState.menuHidden
+                            }));
+                        }}
                         className="nav-button"
                         style={this.state.menuHidden ? null : { display: 'block' }}
                     >
@@ -50,9 +55,9 @@ class NavHeader extends React.Component {
 
     render() {
         return (
-            <div className="nav-header d-flex justify-content-center nav-menu-container">
+            <div className="nav-header d-flex justify-content-center">
                 <Row className="gx-0">
-                    <Col className="nav-menu-button">
+                    <Col xs={12} className="nav-menu-button ">
                         <img
                             src={require('../img/menu-icon.png')}
                             className="menu-icon"
