@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/cosette-commishes/static/css/main.ba289a07.css",
-    "main.js": "/cosette-commishes/static/js/main.df80c1fe.js",
+    "main.js": "/cosette-commishes/static/js/main.326207bb.js",
     "static/media/logo.png": "/cosette-commishes/static/media/logo.fdd4aa9ec62f30c0f55c.png",
     "static/media/icon-draw.png": "/cosette-commishes/static/media/icon-draw.ea7ea2373fa8e5fcd549.png",
     "static/media/main-img.jpg": "/cosette-commishes/static/media/main-img.39b831d2e3f87289e428.jpg",
     "index.html": "/cosette-commishes/index.html",
     "main.ba289a07.css.map": "/cosette-commishes/static/css/main.ba289a07.css.map",
-    "main.df80c1fe.js.map": "/cosette-commishes/static/js/main.df80c1fe.js.map"
+    "main.326207bb.js.map": "/cosette-commishes/static/js/main.326207bb.js.map"
   },
   "entrypoints": [
     "static/css/main.ba289a07.css",
-    "static/js/main.df80c1fe.js"
+    "static/js/main.326207bb.js"
   ]
 }
