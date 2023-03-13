@@ -34,7 +34,7 @@ class Tos extends React.Component {
                     </Col>
                     <Col xs={12}>
                         <a href="#will-wont" className="tos-sections-btn">
-                            IV. Will/Won't Draw
+                            IV. Will / Won't Draw
                         </a>
                     </Col>
                     <Col xs={12}>
@@ -105,7 +105,7 @@ class Tos extends React.Component {
                             <br />
                         </ul>
                         <div className="title-terms text-center" id="will-wont">
-                            <p>IV. WILL/WON'T DRAW</p>
+                            <p>IV. WILL / WON'T DRAW</p>
                         </div>
                         <ul className="paraph-pricing">
                             <li><strong>Allowed Content:</strong></li>
@@ -138,9 +138,11 @@ class Tos extends React.Component {
                             <br />
                             <li><strong>Facebook:</strong> Fitch Emmerson. <strong>-REASON:</strong> Rude treatment, insults, hypocrisy and disrespect.</li>
                             <br />
-                            <li><strong>Facebook:</strong>Benjamín de Solcito. <strong>-REASON:</strong> Simple personal conflicts, bad experiences, she applied hardreference on commissions paid by another client.</li>
+                            <li><strong>Facebook:</strong> Benjamín de Solcito. <strong>-REASON:</strong> Simple personal conflicts, bad experiences, she applied hardreference on commissions paid by another client.</li>
                             <br />
                             <li><strong>Facebook:</strong> Domingo Acosta Mijares. <strong>-REASON:</strong> Possible pedophile, found with Cubs porn content.</li>
+                            <br />
+                            <li><strong>Facebook:</strong> Nirutsu N. Berry. <strong>-REASON:</strong> Rude treatment, drama, has bewares and disrespect.</li>
                             <br />
                         </ul>
                     </Col>
@@ -168,7 +170,7 @@ class Tos extends React.Component {
                     </Col>
                 </Row>
                 {this.infoTos()}
-                <Row className="main-col-center justify-content-center floating-logo-row">
+                <Row className="main-col-center align-content-center floating-logo-row">
                     <FloatingLogo />
                 </Row>
             </Container>

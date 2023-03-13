@@ -60,7 +60,7 @@ class Faq extends React.Component {
                 <Row className="mt-4 main-col-center text-center px-5">
                     {this.infoFaq()}
                 </Row>
-                <Row className="main-col-center justify-content-center floating-logo-row">
+                <Row className="main-col-center align-content-center floating-logo-row">
                     <FloatingLogo />
                 </Row>
                 {/* </div> */}

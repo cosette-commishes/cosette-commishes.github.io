@@ -77,7 +77,7 @@ class Pricing extends React.Component {
                     <Row className="floating-warning-row">
                         <FloatingWarning />
                     </Row>
-                    <Row className="main-col-center justify-content-center floating-logo-row">
+                    <Row className="main-col-center align-content-center floating-logo-row">
                         <FloatingLogo />
                     </Row>
                 </Container>

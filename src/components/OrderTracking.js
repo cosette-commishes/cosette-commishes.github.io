@@ -81,7 +81,7 @@ class OrderTracking extends React.Component {
                         </div>
                     </Col>
                 </Row>
-                <Row className="main-col-center justify-content-center floating-logo-row mt-5">
+                <Row className="main-col-center align-content-center floating-logo-row mt-5">
                     <FloatingLogo />
                 </Row>
                 {/* </div> */}
