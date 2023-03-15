@@ -16,13 +16,16 @@ import PageNotFound from "./components/PageNotFound";
 
 class App extends React.Component {
 
+    compo
+
     componentDidMount() {
         const path = (window.location.pathname).split('/');
         this.props.changeRoute("/" + path[path.length - 1]);
     }
 
     isValidPath(path) {
-        return (path === "/" ||
+        return (path === null ||
+            path === "/" ||
             path === "/info-and-faq" ||
             path === "/pricing" ||
             path === "/terms-of-service" ||
@@ -40,7 +43,7 @@ class App extends React.Component {
                     <Route path="/terms-of-service" exact component={Tos} />
                     <Route path="/order-tracking" exact component={OrderTracking} />
                     <Route path="/page-not-found" exact component={PageNotFound} />
-                    {/* {this.isValidPath(this.props.route) ? null : <Redirect to='/page-not-found' />} */}
+                    {this.isValidPath(this.props.route) ? null : <Redirect to='/page-not-found' />}
                 </BrowserRouter>
                 <FloatingButton />
             </>
