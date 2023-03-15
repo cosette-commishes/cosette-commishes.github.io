@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { changeRoute } from "../actions";
+import Footer from "./Footer";
 
 class Home extends React.Component {
 
@@ -14,7 +15,6 @@ class Home extends React.Component {
 
     render() {
         return (
-            // <div className="main-container d-flex flex-column justify-content-center align-items-center">
             <Container className="p-5">
                 <Row className="main-child-container">
                     <Col xs={12} xl={6} className="my-auto d-flex justify-content-center">
@@ -44,8 +44,12 @@ class Home extends React.Component {
                         </Row>
                     </Col>
                 </Row>
+                <Row className="text-center mt-5">
+                    <Col xs={12}>
+                        <Footer />
+                    </Col>
+                </Row>
             </Container>
-            // </div>
         );
     }
 

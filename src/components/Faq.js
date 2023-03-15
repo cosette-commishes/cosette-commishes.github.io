@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { connect } from "react-redux";
 import { changeRoute } from "../actions";
 import FloatingLogo from "./FloatingLogo";
+import Footer from "./Footer";
 
 class Faq extends React.Component {
     infoFaq() {
@@ -49,21 +50,27 @@ class Faq extends React.Component {
 
     render() {
         return (
-            <Container className="main-child-container">
-                <Row className="justify-content-center">
-                    <Col xs={12} xl={4} className="text-center">
-                        <div className="top-button">
-                            INFO AND FAQ
-                        </div>
+            <Container>
+                <Container className="main-child-container">
+                    <Row className="justify-content-center">
+                        <Col xs={12} xl={4} className="text-center">
+                            <div className="top-button">
+                                INFO AND FAQ
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row className="mt-4 main-col-center text-center px-5">
+                        {this.infoFaq()}
+                    </Row>
+                    <Row className="main-col-center align-content-center floating-logo-row">
+                        <FloatingLogo />
+                    </Row>
+                </Container>
+                <Row className="text-center mt-5">
+                    <Col xs={12}>
+                        <Footer />
                     </Col>
                 </Row>
-                <Row className="mt-4 main-col-center text-center px-5">
-                    {this.infoFaq()}
-                </Row>
-                <Row className="main-col-center align-content-center floating-logo-row">
-                    <FloatingLogo />
-                </Row>
-                {/* </div> */}
             </Container>
         );
     };

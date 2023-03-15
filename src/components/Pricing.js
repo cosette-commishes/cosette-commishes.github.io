@@ -4,6 +4,7 @@ import FloatingWarning from "./FloatingWarning";
 import { connect } from "react-redux";
 import { changeRoute } from "../actions";
 import FloatingLogo from "./FloatingLogo";
+import Footer from "./Footer";
 
 class Pricing extends React.Component {
 
@@ -63,8 +64,7 @@ class Pricing extends React.Component {
     }
     render() {
         return (
-            // <div className="main-container d-flex flex-column justify-content-center align-items-center">
-                // <div className="text-center main-child-container">
+            <Container>
                 <Container className="main-child-container">
                     <Row className="justify-content-center">
                         <Col xs={12} xl={4}>
@@ -73,7 +73,7 @@ class Pricing extends React.Component {
                             </div>
                         </Col>
                     </Row>
-                        {this.pricingInfo()}
+                    {this.pricingInfo()}
                     <Row className="floating-warning-row">
                         <FloatingWarning />
                     </Row>
@@ -81,8 +81,12 @@ class Pricing extends React.Component {
                         <FloatingLogo />
                     </Row>
                 </Container>
-                // </div>
-            // </div>
+                <Row className="text-center mt-5">
+                    <Col xs={12}>
+                        <Footer />
+                    </Col>
+                </Row>
+            </Container>
         );
     }
 
