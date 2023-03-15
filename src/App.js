@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 
 import Home from "./components/Home";
 import Faq from "./components/Faq";
@@ -11,6 +11,8 @@ import './App.css';
 import NavHeader from "./components/NavHeader";
 import { connect } from "react-redux";
 import { changeRoute } from "./actions";
+import FloatingButton from "./components/FloatingButton";
+import PageNotFound from "./components/PageNotFound";
 
 class App extends React.Component {
 
@@ -19,19 +21,28 @@ class App extends React.Component {
         this.props.changeRoute("/" + path[path.length - 1]);
     }
 
+    isValidPath(path) {
+        return (path === "/" ||
+            path === "/info-and-faq" ||
+            path === "/pricing" ||
+            path === "/terms-of-service" ||
+            path === "/order-tracking") ? true : false;
+    }
+
     render() {
         return (
             <>
                 <BrowserRouter basename="/">
                     <Route path="/" exact component={Home} />
-                    <>
-                        {this.props.route === "/" ? null : <NavHeader />}
-                        <Route path="/info-and-faq" exact component={Faq} />
-                        <Route path="/pricing" exact component={Pricing} />
-                        <Route path="/terms-of-service" exact component={Tos} />
-                        <Route path="/order-tracking" exact component={OrderTracking} />
-                    </>
+                    {this.props.route === "/" || !this.isValidPath(this.props.route) ? null : <NavHeader />}
+                    <Route path="/info-and-faq" exact component={Faq} />
+                    <Route path="/pricing" exact component={Pricing} />
+                    <Route path="/terms-of-service" exact component={Tos} />
+                    <Route path="/order-tracking" exact component={OrderTracking} />
+                    <Route path="/page-not-found" exact component={PageNotFound} />
+                    {/* {this.isValidPath(this.props.route) ? null : <Redirect to='/page-not-found' />} */}
                 </BrowserRouter>
+                <FloatingButton />
             </>
         );
     }

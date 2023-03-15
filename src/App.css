@@ -344,28 +344,32 @@ body {
     0% {
         opacity: 1;
     }
+
     25% {
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     75% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
 
-.spinner-container p{
+.spinner-container p {
     animation: opacityOn 5s infinite forwards;
     animation-delay: 1.5s;
     color: var(--second-bg-color);
     margin-top: 10px;
 }
 
-.spinner-container div{
+.spinner-container div {
     color: var(--primary-color) !important;
 }
 
@@ -403,10 +407,23 @@ body {
     margin-left: 3px;
 }
 
+.not-found-text {
+    color: #F4E6EC;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.not-found-descr {
+    /* font-family: ']; */
+    font-weight: lighter;
+    font-style: italic;
+    color: #F4E6EC;
+}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .logo{
+    .logo {
         background-size: 100% auto;
     }
 }
@@ -420,8 +437,7 @@ body {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
+@media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -466,19 +482,19 @@ body {
         width: 480px !important;
     }
 
-    .floating-warning-row{
+    .floating-warning-row {
         position: absolute;
         margin: -10px 0 0 -100px !important;
     }
 
-    .floating-logo-row{
+    .floating-logo-row {
         position: absolute;
         right: 0;
         margin: -50px 10px 0 0 !important;
     }
 
     /* TRACKING */
-    .tracking-info{
+    .tracking-info {
         align-items: center;
     }
 
@@ -494,11 +510,100 @@ body {
     .footer a {
         color: rgb(68, 67, 67);
     }
-    
+
 }
 
 @media only screen and (min-width: 1577px) {
-    .floating-logo-row{
+    .floating-logo-row {
         margin: -50px 5% 0 0 !important;
     }
+}
+
+.floating-buttons {
+    padding: 10px 10px 0 10px;
+    display: grid;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    background-color: var(--primary-color);
+    border-radius: 100px;
+    box-shadow: 0 0 50px 1px var(--primary-color);
+    /* outer right cyan */
+    /* transition: 2s; */
+    /* animation-name: example;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s; */
+}
+
+.floating-buttons a:hover {
+    color: #e5e5e5;
+}
+
+.instagram {
+    margin-bottom: -100% !important;
+    visibility: hidden;
+}
+
+.floating-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background-color: transparent;
+    transition: margin 0.5s;
+    color: white;
+
+    /* animation-duration: 5s; */
+}
+
+.telegram svg {
+    width: auto;
+    height: 80% !important;
+}
+
+.floating-button.telegram svg:hover {
+    width: 150% !important;
+    height: 150% !important;
+}
+
+.floating-button svg {
+    width: auto;
+    height: 70%;
+}
+
+.floating-buttons {
+    padding: 10px;
+}
+
+@keyframes example {
+    0% {
+        padding: 10px 10px 0 10px;
+    }
+
+    3% {
+        padding: 25px;
+    }
+
+    7% {
+        padding: 10px 10px 0 10px;
+    }
+
+    100% {
+        padding: 10px 10px 0 10px;
+    }
+}
+
+.active {
+    /* transform: rotate(125deg);    */
+}
+
+.sc-active {
+    visibility: visible;
 }
