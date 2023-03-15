@@ -5,30 +5,22 @@ import { changeRoute } from "../actions";
 import FloatingLogo from "./FloatingLogo";
 import Footer from "./Footer";
 
-var data = [
-    {
-        "origin": "Facebook",
-        "name": "Fitch Emmerson",
-        "reason": "Rude treatment, insults, hypocrisy and disrespect"
-    },
-    {
-        "origin": "Facebook",
-        "name": "Benjamín de Solcito",
-        "reason": "Simple personal conflicts, bad experiences, she applied hardreference on commissions paid by another client"
-    },
-    {
-        "origin": "Facebook",
-        "name": "Domingo Acosta Mijare",
-        "reason": "Possible pedophile, found with Cubs porn content"
-    },
-    {
-        "origin": "Facebook",
-        "name": "Nirutsu N. Berry",
-        "reason": "Rude treatment, drama, has bewares and disrespect"
-    }
-];
-
 class Tos extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { blackList: [] };
+    }
+
+    fetchList = () => {
+        fetch("https://motley-green-walkover.glitch.me/blacklist")
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                this.setState({ blackList: data});
+            })
+    }    
+
     renderBlackList(list) {
         return (
             <ul className="paraph-pricing">
@@ -184,6 +176,7 @@ class Tos extends React.Component {
     }
 
     componentDidMount() {
+        this.fetchList();
         const path = (window.location.pathname).split('/');
         this.props.changeRoute("/" + path[path.length - 1]);
         window.scrollTo(0, 0);
@@ -199,7 +192,7 @@ class Tos extends React.Component {
                             </div>
                         </Col>
                     </Row>
-                    {this.infoTos(data)}
+                    {this.infoTos(this.state.blackList)}
                     <Row className="main-col-center align-content-center floating-logo-row">
                         <FloatingLogo />
                     </Row>

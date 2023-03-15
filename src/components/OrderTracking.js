@@ -11,7 +11,7 @@ class OrderTracking extends React.Component {
         this.state = { orders: [] }
     }
 
-    fetchUserData = () => {
+    fetchOrders = () => {
         fetch("https://motley-green-walkover.glitch.me/tracking")
             .then(response => {
                 return response.json()
@@ -22,7 +22,7 @@ class OrderTracking extends React.Component {
     }
 
     componentDidMount() {
-        this.fetchUserData();
+        this.fetchOrders();
         const path = (window.location.pathname).split('/');
         this.props.changeRoute("/" + path[path.length - 1]);
         window.scrollTo(0, 0);

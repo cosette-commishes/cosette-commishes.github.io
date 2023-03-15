@@ -9,11 +9,8 @@ import Tos from "./components/Tos";
 
 import './App.css';
 import NavHeader from "./components/NavHeader";
-import FloatingLogo from "./components/FloatingLogo";
 import { connect } from "react-redux";
 import { changeRoute } from "./actions";
-import Footer from "./components/Footer";
-import { Row } from "react-bootstrap";
 
 class App extends React.Component {
 
@@ -35,7 +32,6 @@ class App extends React.Component {
                         <Route path="/order-tracking" exact component={OrderTracking} />
                     </>
                 </BrowserRouter>
-                {/* <Footer /> */}
             </>
         );
     }
