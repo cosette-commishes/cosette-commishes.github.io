@@ -22,7 +22,7 @@ class App extends React.Component {
     render() {
         return (
             <>
-                <BrowserRouter basename="/cosette-commishes">
+                <BrowserRouter basename="/">
                     <Route path="/" exact component={Home} />
                     <>
                         {this.props.route === "/" ? null : <NavHeader />}

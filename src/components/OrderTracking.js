@@ -46,14 +46,14 @@ class OrderTracking extends React.Component {
     showTracker(order) {
         return (
             <Container>
-                <Row className="text-center mb-3 tracking-info">
+                <Row className="text-center mb-3 tracking-info align-items-center">
                     <Col xs={12} md={4} xl={6} className="d-flex justify-content-center mt-2 mb-3">
                         <div className="paint-icon" />
                     </Col>
                     <Col xs={12} md={2} className="text-center">{order.nombre}</Col>
                     <Col xs={12} md={2} className="text-center">{order.tipo}</Col>
                     <Col xs={12} md={2} className="text-center">
-                        <a href={order.url} rel="noopener noreferrer" target="_blank" class={this.getOrderStatus(order.estado) === 100 ? 'url-btn' : 'url-btn btn-disabled'}>Download</a>
+                        <a href={order.url} rel="noopener noreferrer" target="_blank" className={this.getOrderStatus(order.estado) === 100 ? 'url-btn' : 'url-btn btn-disabled'}>Download</a>
                     </Col>
                 </Row>
                 <Row className="gx-0 mb-2">
@@ -100,7 +100,7 @@ class OrderTracking extends React.Component {
         return (
             <div className="spinner-container" style={{padding: "180px 0"}}>
                 <Col xs={12}>
-                <div class="d-flex justify-content-center">
+                <div className="d-flex justify-content-center">
                     <Spinner className="mx-2" animation="grow" variant="light"  />
                     <Spinner className="mx-2" animation="grow" variant="light"  />
                     <Spinner className="mx-2" animation="grow" variant="light"  />

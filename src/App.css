@@ -295,6 +295,8 @@ body {
     font-weight: 900;
     transition: 0.4s;
     border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .active,
@@ -308,6 +310,7 @@ body {
     display: block;
     background-color: var(--second-bg-color);
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .paint-icon {
@@ -326,6 +329,11 @@ body {
 .tracking-col {
     height: 500px;
     margin-bottom: 40px;
+}
+
+.tracking-info * {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* .spinner-container{
@@ -407,6 +415,7 @@ body {
 @media only screen and (min-width: 768px) {
     .tracking-info {
         padding-top: 25px;
+        margin: 0;
     }
 }
 

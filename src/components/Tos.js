@@ -179,7 +179,7 @@ class Tos extends React.Component {
         return (
             <div className="spinner-container">
                 <Col xs={12}>
-                    <div class="d-flex justify-content-center">
+                    <div className="d-flex justify-content-center">
                         <Spinner animation="border" variant="dark" />
                     </div>
                 </Col>
