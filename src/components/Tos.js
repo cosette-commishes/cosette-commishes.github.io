@@ -35,11 +35,11 @@ class Tos extends React.Component {
                 <li>This list is exclusively for people with a terrible client experience, these people simply do not be able to have any kind of professional treatment with me again, once inside you will not be able to leave.</li>
                 <br />
                 {
-                    list.map((list) => (
-                        <>
+                    list.map((list, idx) => (
+                        <div key={"bklist-"+idx}>
                             <li><strong>{list.origin}:</strong> {list.name}. <strong>-REASON:</strong> {list.reason}.</li>
                             <br />
-                        </>
+                        </div>
                     ))
                 }
             </ul>

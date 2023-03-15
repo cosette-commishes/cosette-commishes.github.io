@@ -5,56 +5,24 @@ import { Col, Container, ProgressBar, Row } from "react-bootstrap";
 import FloatingLogo from "./FloatingLogo";
 import Footer from "./Footer";
 
-var test = [
-    {
-        "fechaPedido": "nov/01/2022",
-        "nombre": "Alfredo Gutierrez",
-        "valor": "10",
-        "estado": "Sketch",
-        "fechaFinalizado": null,
-        "url": null,
-        "tipo": "Sketchy"
-    },
-    {
-        "fechaPedido": "nov/01/2022",
-        "nombre": "Pedro Monsalve",
-        "valor": "10",
-        "estado": "Lineart",
-        "fechaFinalizado": "mar/14/2023",
-        "url": null,
-        "tipo": "Icon"
-    },
-    {
-        "fechaPedido": "nov/01/2022",
-        "nombre": "Ruth Gonzalez",
-        "valor": "10",
-        "estado": "Color",
-        "fechaFinalizado": null,
-        "url": null,
-        "tipo": "Halfbody"
-    },
-    {
-        "fechaPedido": "nov/01/2022",
-        "nombre": "Raul Camargo",
-        "valor": "10",
-        "estado": "Done",
-        "fechaFinalizado": null,
-        "url": "https://google.com",
-        "tipo": "Fullbody"
-    },
-    {
-        "fechaPedido": "nov/01/2022",
-        "nombre": "Edgar Poe",
-        "valor": "10",
-        "estado": "Sketch",
-        "fechaFinalizado": null,
-        "url": null,
-        "tipo": "Illustration"
-    }
-]
-
 class OrderTracking extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { orders: [] }
+    }
+
+    fetchUserData = () => {
+        fetch("https://motley-green-walkover.glitch.me/tracking")
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                this.setState({ orders: data});
+            })
+    }
+
     componentDidMount() {
+        this.fetchUserData();
         const path = (window.location.pathname).split('/');
         this.props.changeRoute("/" + path[path.length - 1]);
         window.scrollTo(0, 0);
@@ -108,7 +76,7 @@ class OrderTracking extends React.Component {
         return (
             <Col xs={12} className="overflow-auto tracking-col">
                 {data.map((order, idx) => (
-                    <>
+                    <div key={"order-"+idx}>
                         <button className="accordion"
                             onClick={() => {
                                 this.props.order === idx ? this.props.selectOrder(-1) :
@@ -121,7 +89,7 @@ class OrderTracking extends React.Component {
                         >
                             {this.showTracker(order)}
                         </div>
-                    </>
+                    </div>
                 ))}
 
             </Col>
@@ -149,7 +117,7 @@ class OrderTracking extends React.Component {
                         </Col>
                     </Row>
                     <Row className="">
-                        {this.renderOrders(test)}
+                        {this.renderOrders(this.state.orders)}
                     </Row>
                     <Row className="main-col-center align-content-center floating-logo-row">
                         <FloatingLogo />
@@ -166,7 +134,6 @@ class OrderTracking extends React.Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state);
     return { route: state.route, order: state.order };
 }
 
