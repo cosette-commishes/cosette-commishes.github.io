@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Spinner } from "react-bootstrap";
 import { connect } from "react-redux";
 import { changeRoute } from "../actions";
 import FloatingLogo from "./FloatingLogo";
@@ -17,18 +17,18 @@ class Tos extends React.Component {
                 return response.json()
             })
             .then(data => {
-                this.setState({ blackList: data});
+                this.setState({ blackList: data });
             })
-    }    
+    }
 
     renderBlackList(list) {
         return (
             <ul className="paraph-pricing">
                 <li>This list is exclusively for people with a terrible client experience, these people simply do not be able to have any kind of professional treatment with me again, once inside you will not be able to leave.</li>
                 <br />
-                {
+                {this.state.blackList.length === 0 ? this.renderSpinnerLoading() :
                     list.map((list, idx) => (
-                        <div key={"bklist-"+idx}>
+                        <div key={"bklist-" + idx}>
                             <li><strong>{list.origin}:</strong> {list.name}. <strong>-REASON:</strong> {list.reason}.</li>
                             <br />
                         </div>
@@ -175,12 +175,32 @@ class Tos extends React.Component {
         );
     }
 
+    renderSpinnerLoading() {
+        return (
+            <div className="spinner-container">
+                <Col xs={12}>
+                    <div class="d-flex justify-content-center">
+                        <Spinner animation="border" variant="dark" />
+                    </div>
+                </Col>
+                <Col xs={12}>
+                    <div className="text-center">
+                        <p>
+                            Loading...
+                        </p>
+                    </div>
+                </Col>
+            </div>
+        );
+    }
+
     componentDidMount() {
         this.fetchList();
         const path = (window.location.pathname).split('/');
         this.props.changeRoute("/" + path[path.length - 1]);
         window.scrollTo(0, 0);
     }
+
     render() {
         return (
             <Container>

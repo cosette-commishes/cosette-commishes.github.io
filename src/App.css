@@ -328,6 +328,39 @@ body {
     margin-bottom: 40px;
 }
 
+/* .spinner-container{
+    padding: 200px 0;
+} */
+
+@keyframes opacityOn {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.spinner-container p{
+    animation: opacityOn 5s infinite forwards;
+    animation-delay: 1.5s;
+    color: var(--second-bg-color);
+    margin-top: 10px;
+}
+
+.spinner-container div{
+    color: var(--primary-color) !important;
+}
+
 /* Footer */
 
 .footer {

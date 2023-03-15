@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { changeRoute, selectOrder } from "../actions";
-import { Col, Container, ProgressBar, Row } from "react-bootstrap";
+import { Col, Container, ProgressBar, Row, Spinner } from "react-bootstrap";
 import FloatingLogo from "./FloatingLogo";
 import Footer from "./Footer";
 
@@ -17,7 +17,7 @@ class OrderTracking extends React.Component {
                 return response.json()
             })
             .then(data => {
-                this.setState({ orders: data});
+                this.setState({ orders: data });
             })
     }
 
@@ -76,7 +76,7 @@ class OrderTracking extends React.Component {
         return (
             <Col xs={12} className="overflow-auto tracking-col">
                 {data.map((order, idx) => (
-                    <div key={"order-"+idx}>
+                    <div key={"order-" + idx}>
                         <button className="accordion"
                             onClick={() => {
                                 this.props.order === idx ? this.props.selectOrder(-1) :
@@ -96,7 +96,26 @@ class OrderTracking extends React.Component {
         );
     }
 
-
+    renderSpinnerLoading() {
+        return (
+            <div className="spinner-container" style={{padding: "180px 0"}}>
+                <Col xs={12}>
+                <div class="d-flex justify-content-center">
+                    <Spinner className="mx-2" animation="grow" variant="light"  />
+                    <Spinner className="mx-2" animation="grow" variant="light"  />
+                    <Spinner className="mx-2" animation="grow" variant="light"  />
+                </div>
+                </Col>
+                <Col xs={12}>
+                    <div className="text-center">
+                        <p>
+                            Loading...
+                        </p>
+                    </div>
+                </Col>
+            </div>
+        );
+    }
 
     render() {
         return (
@@ -116,8 +135,8 @@ class OrderTracking extends React.Component {
                             </div>
                         </Col>
                     </Row>
-                    <Row className="">
-                        {this.renderOrders(this.state.orders)}
+                    <Row>
+                        {this.state.orders.length === 0 ? this.renderSpinnerLoading() : this.renderOrders(this.state.orders)}
                     </Row>
                     <Row className="main-col-center align-content-center floating-logo-row">
                         <FloatingLogo />
