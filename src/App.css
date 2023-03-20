@@ -560,7 +560,6 @@ body {
     transition: margin 0.5s;
     color: white;
 
-    /* animation-duration: 5s; */
 }
 
 .telegram svg {
@@ -568,7 +567,12 @@ body {
     height: 80% !important;
 }
 
-.floating-button.telegram svg:hover {
+.telegram {
+    border: none;
+    transition: 0.5s;
+}
+
+.floating-button svg:hover {
     width: 150% !important;
     height: 150% !important;
 }
@@ -576,10 +580,6 @@ body {
 .floating-button svg {
     width: auto;
     height: 70%;
-}
-
-.floating-buttons {
-    padding: 10px;
 }
 
 @keyframes example {
@@ -601,7 +601,7 @@ body {
 }
 
 .active {
-    /* transform: rotate(125deg);    */
+    transform: rotate(125deg);   
 }
 
 .sc-active {

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Redirect, Route } from "react-router-dom";
 
 import Home from "./components/Home";
 import Faq from "./components/Faq";
@@ -19,12 +19,12 @@ class App extends React.Component {
     compo
 
     componentDidMount() {
-        const path = (window.location.pathname).split('/');
-        this.props.changeRoute("/" + path[path.length - 1]);
+        const path = (window.location.pathname).split('/').slice(1).join('/');
+        this.props.changeRoute("/" + path);
     }
 
     isValidPath(path) {
-        return (path === null ||
+        return ( path === null ||
             path === "/" ||
             path === "/info-and-faq" ||
             path === "/pricing" ||
@@ -35,7 +35,7 @@ class App extends React.Component {
     render() {
         return (
             <>
-                <BrowserRouter basename="/">
+                <BrowserRouter>
                     <Route path="/" exact component={Home} />
                     {this.props.route === "/" || !this.isValidPath(this.props.route) ? null : <NavHeader />}
                     <Route path="/info-and-faq" exact component={Faq} />
