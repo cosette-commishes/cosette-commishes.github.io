@@ -16,8 +16,6 @@ import PageNotFound from "./components/PageNotFound";
 
 class App extends React.Component {
 
-    compo
-
     componentDidMount() {
         const path = (window.location.pathname).split('/').slice(1).join('/');
         this.props.changeRoute("/" + path);

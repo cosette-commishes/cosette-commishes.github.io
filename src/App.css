@@ -525,18 +525,9 @@ body {
     position: fixed;
     bottom: 50px;
     right: 50px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
     background-color: var(--primary-color);
     border-radius: 100px;
     box-shadow: 0 0 50px 1px var(--primary-color);
-    /* outer right cyan */
-    /* transition: 2s; */
-    /* animation-name: example;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
-    animation-delay: 0s; */
 }
 
 .floating-buttons a:hover {
@@ -562,6 +553,14 @@ body {
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+#tos-scrolling {
+    scroll-behavior: smooth;
+}
+
 .telegram svg {
     width: auto;
     height: 80% !important;
@@ -580,24 +579,6 @@ body {
 .floating-button svg {
     width: auto;
     height: 70%;
-}
-
-@keyframes example {
-    0% {
-        padding: 10px 10px 0 10px;
-    }
-
-    3% {
-        padding: 25px;
-    }
-
-    7% {
-        padding: 10px 10px 0 10px;
-    }
-
-    100% {
-        padding: 10px 10px 0 10px;
-    }
 }
 
 .active {

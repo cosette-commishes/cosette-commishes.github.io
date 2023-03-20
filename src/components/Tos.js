@@ -78,7 +78,7 @@ class Tos extends React.Component {
                         </Col>
                     </Col>
                     <Col lg={9} className="main-col-center">
-                        <Col className="overflow-auto text-start tos-col mt-3 text-left">
+                        <Col className="overflow-auto text-start tos-col mt-3 text-left" id="tos-scrolling">
                             <div className="title-terms text-center" id="basic-terms">
                                 <p>I. Basic Terms</p>
                             </div>
@@ -195,6 +195,14 @@ class Tos extends React.Component {
     }
 
     componentDidMount() {
+        const script = document.createElement("script");
+
+        script.src = "https://use.typekit.net/foobar.js";
+        script.async = true;
+    
+        document.body.appendChild(script);
+
+
         this.fetchList();
         const path = (window.location.pathname).split('/');
         this.props.changeRoute("/" + path[path.length - 1]);
