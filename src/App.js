@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Redirect, Route } from "react-router-dom";
+import AnimatedCursor from "react-animated-cursor"
 
 import Home from "./components/Home";
 import Faq from "./components/Faq";
@@ -22,7 +23,7 @@ class App extends React.Component {
     }
 
     isValidPath(path) {
-        return ( path === null ||
+        return (path === null ||
             path === "/" ||
             path === "/info-and-faq" ||
             path === "/pricing" ||
@@ -44,6 +45,27 @@ class App extends React.Component {
                     {this.isValidPath(this.props.route) ? null : <Redirect to='/page-not-found' />}
                 </BrowserRouter>
                 <FloatingButton />
+                <AnimatedCursor
+                    innerSize={15}
+                    outerSize={8}
+                    color='243, 83, 179'
+                    outerAlpha={0.2}
+                    innerScale={0.7}
+                    outerScale={5}
+                    clickables={[
+                        'a',
+                        'input[type="text"]',
+                        'input[type="email"]',
+                        'input[type="number"]',
+                        'input[type="submit"]',
+                        'input[type="image"]',
+                        'label[for]',
+                        'select',
+                        'textarea',
+                        'button',
+                        '.link'
+                    ]}
+                />
             </>
         );
     }
